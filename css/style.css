@@ -1,0 +1,161 @@
+* {
+  font-family: "Ubuntu", Noto Sans TC;
+  letter-spacing: 1.5px;
+  line-height: 150%;
+  position: relative;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background: linear-gradient(90deg, #222, #444);
+}
+
+.row, .col-sm-12, .col-sm-6, h1, h2, h3, h4, h5, h6, hr, p, ul, li, label, span {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#air_hockey {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#air_hockey > * {
+  margin: 0 0 20px 0;
+}
+#air_hockey h1 {
+  font-size: 30px;
+  color: #DDD;
+}
+#air_hockey .score {
+  padding: 20px 40px;
+  font-size: 20px;
+  color: #DDD;
+}
+#air_hockey .game_box {
+  width: 500px;
+  height: 500px;
+  border-radius: 20px;
+  border: 10px solid #05004e;
+  background-color: #DDD;
+  overflow: hidden;
+}
+#air_hockey .game_box .background {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-color: #76b39d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 75%;
+}
+#air_hockey .game_box [class^="circle"] {
+  width: 150px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid #05004e;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+#air_hockey .game_box .circle_01 {
+  top: 0;
+}
+#air_hockey .game_box .circle_02 {
+  top: 100%;
+}
+#air_hockey .game_box .dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #05004e;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+#air_hockey .game_box [class^="line"] {
+  width: 50%;
+  height: 10px;
+  border-radius: 20px;
+  background-color: #05004e;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+#air_hockey .game_box .line_01 {
+  left: 10%;
+}
+#air_hockey .game_box .line_02 {
+  left: 90%;
+}
+#air_hockey .game_box .mallet, #air_hockey .game_box .puck {
+  position: absolute;
+}
+#air_hockey .game_box .mallet svg path, #air_hockey .game_box .puck svg path {
+  stroke-width: 15px;
+  stroke: #05004e;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  fill: #f9f8eb;
+}
+#air_hockey .game_box .mallet svg path {
+  fill: #fd5f00;
+}
+#air_hockey .game_box .infomation_box {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-color: #DDD;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#air_hockey .game_box .infomation_box .infomation {
+  margin: 0 0 100px 0;
+  font-size: 25px;
+  color: #05004e;
+  text-align: center;
+}
+#air_hockey .game_box .infomation_box .btn_start {
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: #05004e;
+  font-size: 20px;
+  color: #DDD;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#air_hockey .game_box .infomation_box .btn_start:hover {
+  background-color: #0f00e7;
+}

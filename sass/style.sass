@@ -1,0 +1,137 @@
+// ====================
+//      COLORS
+// ==============================
+$c_beige: #f9f8eb
+$c_green: #76b39d
+$c_blue: #05004e
+$c_orange: #fd5f00
+
+$c_black: #333
+$c_white: #DDD
+
+// ====================
+//      MIXIN
+// ==============================
+= center_position
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+= center_flex($j: center, $a: center)
+  display: flex
+  justify-content: $j
+  align-items: $a
+  
+= size($w, $h: $w, $bdrs: 0)
+  width: $w
+  height: $h
+  border-radius: $bdrs
+
+// ====================
+//      DEBUG
+// ==============================
+*
+  // border: 1px solid #000
+
+// ====================
+//      ALL
+// ==============================
+*
+  font-family: 'Ubuntu', Noto Sans TC
+  letter-spacing: 1.5px
+  line-height: 150%
+  position: relative
+html, body
+  +size(100%)
+  margin: 0
+  padding: 0
+  +center_flex
+body
+  background: linear-gradient(90deg, #222, #444)
+.row, .col-sm-12, .col-sm-6, h1, h2, h3, h4, h5, h6, hr, p, ul, li, label, span
+  margin: 0
+  padding: 0
+  list-style: none
+
+// ====================
+//      BODY
+// ==============================
+#air_hockey
+  +size(100%)
+  +center_flex
+  flex-direction: column
+  &>*
+    margin: 0 0 20px 0
+  h1
+    font-size: 30px
+    color: $c_white
+  .score
+    padding: 20px 40px
+    font-size: 20px
+    color: $c_white
+  .game_box
+    +size(500px, 500px, 20px)
+    border: 10px solid $c_blue
+    background-color: $c_white
+    overflow: hidden
+    .background
+      +size(100%)
+      background-color: $c_green
+      +center_position
+      left: 75%
+    [class ^= "circle"]
+      +size(150px, 100px, 50%)
+      border: 10px solid $c_blue
+      +center_position
+    .circle_01
+      top: 0
+    .circle_02
+      top: 100%
+    .dot
+      +size(15px, 15px, 50%)
+      background-color: $c_blue
+      +center_position
+    [class ^= "line"]
+      +size(50%, 10px, 20px)
+      background-color: $c_blue
+      +center_position
+    .line_01
+      left: 10%
+    .line_02
+      left: 90%
+    .mallet, .puck
+      position: absolute
+      svg
+        path
+          stroke-width: 15px
+          stroke: $c_blue
+          stroke-linecap: round
+          stroke-linejoin: round
+          stroke-miterlimit: 10
+          fill: $c_beige
+    .mallet
+      svg
+        path
+          fill: $c_orange
+    .infomation_box
+      +size(100%)
+      background-color: $c_white
+      +center_position
+      +center_flex
+      flex-direction: column
+      .infomation
+        margin: 0 0 100px 0
+        font-size: 25px
+        color: $c_blue
+        text-align: center
+      .btn_start
+        padding: 5px 15px
+        border-radius: 5px
+        background-color: $c_blue
+        font-size: 20px
+        color: $c_white
+        cursor: pointer
+        transition: 0.3s
+        &:hover
+          background-color: lighten($c_blue, 30)
